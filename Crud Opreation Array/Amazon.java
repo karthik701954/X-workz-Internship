@@ -24,4 +24,46 @@ class Amazon {
             System.out.println(category);
         }
     }
+
+    public String getCategoryByName(String categoryName) {
+        String name = null;
+        for (String category : categoryNames) {
+            if (category == categoryName) {
+                name = category;
+                break;
+            }
+        }
+        if (name == null)
+            System.out.println(categoryName + " is not available");
+
+        return name;
+    }
+
+    public boolean updateCategoryName(String existingCategoryName, String updatedCategoryName) {
+        boolean isUpdated = false;
+        for (int i = 0; i < categoryNames.length; i++) {
+            if (existingCategoryName == categoryNames[i]) {
+                categoryNames[i] = updatedCategoryName;
+                isUpdated = true;
+            }
+        }
+        if (isUpdated == false)
+            System.out.println(existingCategoryName + " is not updated");
+
+        return isUpdated;
+    }
+
+    public boolean deleteCategory(String categoryName) {
+        boolean isDeleted = false;
+        for (int i = 0; i < categoryNames.length; i++) {
+            if (categoryName == categoryNames[i]) {
+                categoryNames[i] = null;
+                isDeleted = true;
+            }
+        }
+        if (isDeleted == false)
+            System.out.println(categoryName + " is not deleted");
+
+        return isDeleted;
+    }
 }

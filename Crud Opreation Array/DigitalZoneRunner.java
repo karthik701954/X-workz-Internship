@@ -1,15 +1,34 @@
 class DigitalZoneRunner {
     public static void main(String[] args) {
 
-        DigitalZone dz = new DigitalZone();
+        DigitalZone zone = new DigitalZone();
 
-        dz.addLaptopBrand("Dell");
-        dz.addLaptopBrand("HP");
-        dz.addLaptopBrand("Lenovo");
-        dz.addLaptopBrand("Apple");
-        dz.addLaptopBrand("Asus");
-        dz.addLaptopBrand("Acer");
+        boolean added = zone.addLaptopBrand("HP");
+        System.out.println(added);
+        added = zone.addLaptopBrand("Dell");
+        System.out.println(added);
+        added = zone.addLaptopBrand("Lenovo");
+        System.out.println(added);
+        added = zone.addLaptopBrand("Asus");
+        System.out.println(added);
+        added = zone.addLaptopBrand("Acer");
+        System.out.println(added);
+        added = zone.addLaptopBrand("Apple");
+        System.out.println(added);
 
-        dz.getLaptopBrands();
+        zone.getLaptopBrands();
+
+        String name = zone.getLaptopBrandByName("Dell");
+        System.out.println(name + " is available");
+
+        boolean updated = zone.updateLaptopBrandName("HP", "HP Pavilion");
+        System.out.println(updated);
+
+        zone.getLaptopBrands();
+
+        boolean deleted = zone.deleteLaptopBrand("Acer");
+        System.out.println(deleted);
+
+        zone.getLaptopBrands();
     }
 }

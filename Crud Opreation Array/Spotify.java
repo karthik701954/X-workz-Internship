@@ -23,8 +23,58 @@ class Spotify {
     }
 
     public void getSongs() {
-        for (int i = 0; i < index; i++) {
+        for (int i = 0; i < artistNames.length; i++) {
             System.out.println("Artist: " + artistNames[i] + " | Song: " + songNames[i]);
         }
     }
+
+    public String getSongByName(String songName) {
+        String name = null;
+
+        for (int i = 0; i < songNames.length; i++) {
+            if (songNames[i] == songName) {
+                name = songNames[i];
+                break;
+            }
+        }
+
+        if (name == null)
+            System.out.println(songName + " is not available");
+
+        return name;
+    }
+
+    public boolean updateSong(String existingSong, String updatedSong) {
+        boolean isUpdated = false;
+
+        for (int i = 0; i < songNames.length; i++) {
+            if (songNames[i] == existingSong) {
+                songNames[i] = updatedSong;
+                isUpdated = true;
+            }
+        }
+
+        if (isUpdated == false)
+            System.out.println(existingSong + " is not updated");
+
+        return isUpdated;
+    }
+
+    public boolean deleteSong(String songName) {
+        boolean isDeleted = false;
+
+        for (int i = 0; i < songNames.length; i++) {
+            if (songNames[i] == songName) {
+                songNames[i] = null;
+                artistNames[i] = null;
+                isDeleted = true;
+            }
+        }
+
+        if (isDeleted == false)
+            System.out.println(songName + " is not deleted");
+
+        return isDeleted;
+    }
 }
+

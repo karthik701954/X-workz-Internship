@@ -1,25 +1,54 @@
 class PoliceStationRunner {
     public static void main(String[] args) {
 
-        PoliceStation ps = new PoliceStation();
+        PoliceStation policeStation = new PoliceStation();
 
-        ps.addCase("Theft Case");
-        ps.addCase("Robbery Case");
-        ps.addCase("Fraud Case");
-        ps.addCase("Cyber Crime");
-        ps.addCase("Missing Person");
-        ps.addCase("Accident Case");
-        ps.addCase("Murder Case");
-        ps.addCase("Kidnapping Case");
-        ps.addCase("Domestic Violence");
-        ps.addCase("Drug Case");
-        ps.addCase("Assault Case");
-        ps.addCase("Burglary Case");
-        ps.addCase("Traffic Violation");
-        ps.addCase("Extortion Case");
-        ps.addCase("Arson Case");
-        ps.addCase("Smuggling Case");
+        boolean added = policeStation.addCase("Theft Case");
+        System.out.println(added);
+        added = policeStation.addCase("Murder Case");
+        System.out.println(added);
+        added = policeStation.addCase("Fraud Case");
+        System.out.println(added);
+        added = policeStation.addCase("Cyber Crime");
+        System.out.println(added);
+        added = policeStation.addCase("Kidnap Case");
+        System.out.println(added);
+        added = policeStation.addCase("Accident Case");
+        System.out.println(added);
+        added = policeStation.addCase("Drug Case");
+        System.out.println(added);
+        added = policeStation.addCase("Robbery Case");
+        System.out.println(added);
+        added = policeStation.addCase("Missing Person");
+        System.out.println(added);
+        added = policeStation.addCase("Domestic Violence");
+        System.out.println(added);
+        added = policeStation.addCase("Assault Case");
+        System.out.println(added);
+        added = policeStation.addCase("Bribery Case");
+        System.out.println(added);
+        added = policeStation.addCase("Smuggling Case");
+        System.out.println(added);
+        added = policeStation.addCase("Traffic Violation");
+        System.out.println(added);
+        added = policeStation.addCase("Property Dispute");
+        System.out.println(added);
+        added = policeStation.addCase("Harassment Case");
+        System.out.println(added);
 
-        ps.getCases();
+        policeStation.getCases();
+
+        String name = policeStation.getCaseByName("Cyber Crime");
+        System.out.println(name + " is available");
+
+        boolean updated = policeStation.updateCaseName("Fraud Case", "Online Fraud Case");
+        System.out.println(updated);
+
+        policeStation.getCases();
+
+        boolean deleted = policeStation.deleteCase("Drug Case");
+        System.out.println(deleted);
+
+        policeStation.getCases();
     }
 }

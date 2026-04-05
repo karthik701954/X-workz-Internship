@@ -24,4 +24,53 @@ class SuperMarket {
             System.out.println(product);
         }
     }
+
+    public String getProductByName(String productName) {
+        String name = null;
+
+        for (String product : productNames) {
+            if (product == productName) {
+                name = product;
+                break;
+            }
+        }
+
+        if (name == null)
+            System.out.println(productName + " is not available");
+
+        return name;
+    }
+
+    public boolean updateProduct(String existingProduct, String updatedProduct) {
+        boolean isUpdated = false;
+
+        for (int i = 0; i < productNames.length; i++) {
+            if (existingProduct == productNames[i]) {
+                productNames[i] = updatedProduct;
+                isUpdated = true;
+            }
+        }
+
+        if (isUpdated == false)
+            System.out.println(existingProduct + " is not updated");
+
+        return isUpdated;
+    }
+
+    public boolean deleteProduct(String productName) {
+        boolean isDeleted = false;
+
+        for (int i = 0; i < productNames.length; i++) {
+            if (productName == productNames[i]) {
+                productNames[i] = null;
+                isDeleted = true;
+            }
+        }
+
+        if (isDeleted == false)
+            System.out.println(productName + " is not deleted");
+
+        return isDeleted;
+    }
 }
+

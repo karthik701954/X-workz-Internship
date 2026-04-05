@@ -1,65 +1,80 @@
-class CountryRunner{
-	public static void main(String[]a){
-		Country country = new Country();
-		boolean add=country.addStates("Andhra Pradesh");
-		System.out.println(add);
-		add=country.addStates("Andhra Pradesh");
-		System.out.println(add);
-		add=country.addStates("Arunachal Pradesh");
-		System.out.println(add);
-		add=country.addStates("Assam");
-		System.out.println(add);
-		add=country.addStates("Bihar");
-		System.out.println(add);
-		add=country.addStates("Chhattisgarh");
-		System.out.println(add);
-		add=country.addStates("Goa");
-		System.out.println(add);
-		add=country.addStates("Gujarat");
-		System.out.println(add);
-		add=country.addStates("Haryana");
-		System.out.println(add);
-		add=country.addStates("Himachal Pradesh");
-		System.out.println(add);
-		add=country.addStates("Jharkhand");
-		System.out.println(add);
-		add=country.addStates("Karnataka");
-		System.out.println(add);
-		add=country.addStates("Kerala");
-		System.out.println(add);
-		add=country.addStates("Madhya Pradesh");
-		System.out.println(add);
-		add=country.addStates("Maharashtra");
-		System.out.println(add);
-		add=country.addStates("Manipur");
-		System.out.println(add);
-		add=country.addStates("Meghalaya");
-		System.out.println(add);
-		add=country.addStates("Mizoram");
-		System.out.println(add);
-		add=country.addStates("Nagaland");
-		System.out.println(add);
-		add=country.addStates("Odisha");
-		System.out.println(add);
-		add=country.addStates("Punjab");
-		System.out.println(add);
-		add=country.addStates("Rajasthan");
-		System.out.println(add);
-		add=country.addStates("Sikkim");
-		System.out.println(add);
-		add=country.addStates("Tamil Nadu");
-		System.out.println(add);
-		add=country.addStates("Telangana");
-		System.out.println(add);
-		add=country.addStates("Tripura");
-		System.out.println(add);
-		add=country.addStates("Uttar Pradesh");
-		System.out.println(add);
-		add=country.addStates("Uttarakhand");
-		System.out.println(add);
-		add=country.addStates("West Bengal");
-		System.out.println(add);
-		
-		country.getStates();
-	}
+class CountryRunner {
+    public static void main(String[] args) {
+
+        Country country = new Country();
+
+        boolean add = country.addStates("Andhra Pradesh");
+        System.out.println(add);
+        add = country.addStates("Arunachal Pradesh");
+        System.out.println(add);
+        add = country.addStates("Assam");
+        System.out.println(add);
+        add = country.addStates("Bihar");
+        System.out.println(add);
+        add = country.addStates("Chhattisgarh");
+        System.out.println(add);
+        add = country.addStates("Goa");
+        System.out.println(add);
+        add = country.addStates("Gujarat");
+        System.out.println(add);
+        add = country.addStates("Haryana");
+        System.out.println(add);
+        add = country.addStates("Himachal Pradesh");
+        System.out.println(add);
+        add = country.addStates("Jharkhand");
+        System.out.println(add);
+        add = country.addStates("Karnataka");
+        System.out.println(add);
+        add = country.addStates("Kerala");
+        System.out.println(add);
+        add = country.addStates("Madhya Pradesh");
+        System.out.println(add);
+        add = country.addStates("Maharashtra");
+        System.out.println(add);
+        add = country.addStates("Manipur");
+        System.out.println(add);
+        add = country.addStates("Meghalaya");
+        System.out.println(add);
+        add = country.addStates("Mizoram");
+        System.out.println(add);
+        add = country.addStates("Nagaland");
+        System.out.println(add);
+        add = country.addStates("Odisha");
+        System.out.println(add);
+        add = country.addStates("Punjab");
+        System.out.println(add);
+        add = country.addStates("Rajasthan");
+        System.out.println(add);
+        add = country.addStates("Sikkim");
+        System.out.println(add);
+        add = country.addStates("Tamil Nadu");
+        System.out.println(add);
+        add = country.addStates("Telangana");
+        System.out.println(add);
+        add = country.addStates("Tripura");
+        System.out.println(add);
+        add = country.addStates("Uttar Pradesh");
+        System.out.println(add);
+        add = country.addStates("Uttarakhand");
+        System.out.println(add);
+        add = country.addStates("West Bengal");
+        System.out.println(add);
+        add = country.addStates("Delhi");
+        System.out.println(add);
+
+        country.getStates();
+
+        String name = country.getStateByName("Karnataka");
+        System.out.println(name + " is available");
+
+        boolean updated = country.updateStateName("Goa", "Goa State");
+        System.out.println(updated);
+
+        country.getStates();
+
+        boolean deleted = country.deleteState("Bihar");
+        System.out.println(deleted);
+
+        country.getStates();
+    }
 }
