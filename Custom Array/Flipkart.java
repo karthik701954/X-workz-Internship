@@ -1,10 +1,9 @@
-class Product {
+class Flipkart {
 
     int productId;
     String productName;
     String category;
     double price;
-    int quantity;
-    String brand;
-
+    String sellerName;
 }
+
