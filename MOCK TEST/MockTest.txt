@@ -1,0 +1,160 @@
+1) Explain constructor chaining using this() with example.
+
+ A:-Constructor is an special type of method same method as class name and constructor has no return type.
+ * Constructor chaining is  calling one constructor to another constructor.
+ *
+ Example:-
+    Syntax:
+	
+	class Facbook{
+	
+	public void Facbook(){
+		
+	}
+	public void Facbook(){
+		
+	}
+	class FacbookExecutor{
+		
+		public static void main(String args[]){
+		
+			}
+		}
+	}
+2) Explain defalut values assigned to instance variables in java with example.
+A:-	
+
+
+3)Write a java program to perform CRUD operations on an array:
+	*Create an array
+	*Read/Dispaly element
+	*Update an element
+	*Delete an element
+
+A:-
+
+
+
+
+4)Write a program to demonstrate a defalut constructor.
+
+A:- Defalut constructor has no parameter passed in constructor
+
+class Facbook {
+
+    public void getFacbookDetails() {
+        System.out.println("Default Constructor Called");
+    }
+}
+	Class FacbookExecutor{
+    public static void main(String[] args) {
+	
+        Facbook facbook = new Facbook();
+		Facbook.getFacbookDetails();
+    }
+}
+
+
+
+
+
+5) write a program using a parameterized constructor.
+
+A:-class Cafe {
+    int cafeId;
+    String cafeName;
+}
+	CafeExecutor{
+    public static void main(String[] args)
+	{
+        Cafe ref = new Cafe
+		
+		ref.cafeId = 1;
+		ref.cafeName = Rolex;
+		
+		System.out.println("The Cafe ID is :"+cafeId);
+		System.out.println("The Cafe Name is :"+cafeName);
+		
+		
+        Cafe.getCafeDetails();
+    }
+}
+
+6) what is a constructor in java? who provides the defalut constructor?
+
+A:-A constructor is a special type method Same name as class name and constructor has no return type:
+
+	*Same name as class
+	*No return type
+	*Used to initialize objects
+
+  Default Constructor:
+
+	*Provided by Java compiler automatically
+	*Only if no constructor is written in the class
+
+
+
+7)can a constructor have a return type? why?
+
+ A:-Constructor is an special type of method same method as class name and constructor has no return type.
+	* Constructor as no retrurn Type
+	*Constructor has same name has class name 
+
+
+8) Give a real-world example of a has a realationship?
+
+A:- class IPL{
+	 Season season;
+	}
+  
+    class Season{
+	
+		Table table;
+	}
+	class Table{
+	
+	Team teams[]= new Team[10];
+	
+	public void getTable(){
+		for(Team team: teams){
+			System.out.println("Team:"+team.teamName);
+			System.out.println("Played :"+team.playedMatches);
+			System.out.println("Won :"+team.won);
+			System.out.println("Loss :"+team.loss);
+			System.out.println("NRR :"+team.nrr);
+			System.out.println("------------------------------------------");
+			
+		}
+	}
+}
+	class Team{
+		String teamName;
+		int playedMatches;
+		int won;
+		int loss;
+		double nrr;
+		int points;
+		int lastFive[];
+	}
+	
+	class IPLExecutor{
+	
+	public static void main (String args[]){
+	 
+	 IPL ipl = new IPL();
+	 
+	 Team teamOne = new Team(); 
+		teamOne.teamName="DC";
+		teamOne.playedMatches=14;
+		teamOne.won=10;
+		teamOne.loss=4; teamOne.nrr=0.48;
+		teamOne.lastFive= new int[]{1,1,1,1,0};
+		t1.teams[0]=teamOne;
+		
+	}
+	
+}
+	
+  
+
